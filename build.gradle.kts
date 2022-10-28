@@ -4,7 +4,6 @@ plugins {
     kotlin("jvm") version "1.7.20"
     kotlin("plugin.allopen") version "1.7.20"
     id("io.quarkus")
-//    id("com.apollographql.apollo") version "2.5.13"
     id("com.apollographql.apollo3") version "3.6.2"
     id("org.openapi.generator") version "6.2.0"
 }
@@ -39,10 +38,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.apache.httpcomponents:httpclient:4.5.13")
     implementation("org.apache.commons:commons-lang3")
-//    implementation("com.apollographql.apollo:apollo-runtime:2.5.13")
-//    implementation("io.quarkus:quarkus-smallrye-graphql-client")
     implementation("com.apollographql.apollo3:apollo-runtime:$apolloGraphQlVersion")
-//    implementation("com.squareup.okhttp3:okhttp")
 
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
@@ -71,17 +67,6 @@ sourceSets["main"].java {
     srcDir("build/generated/api-spec/src/main/kotlin")
 }
 
-//apollo {
-//    packageName.set("fi.metatavu.saleor.akeneo.integration.api.graphql")
-////    introspection {
-////        endpointUrl.set("http://localhost:8000/graphql/")
-////        schemaFile.set(file("$projectDir/src/main/kotlin/fi/metatavu/saleor/akeneo/integration/api/graphql/schema.graphqls"))
-////    }
-////    outputDirConnection {
-////        connectToKotlinSourceSet("main")
-////    }
-//    generateKotlinModels.set(true)
-//}
 apollo {
     packageName.set("fi.metatavu.saleor.akeneo.integration.graphql")
     generateKotlinModels.set(true)
@@ -89,7 +74,7 @@ apollo {
 
 val generateApiSpec = tasks.register("generateApiSpec", GenerateTask::class) {
     setProperty("generatorName", "kotlin-server")
-    setProperty("inputSpec", "$rootDir/saleor-akeneo-integration-spec/swagger.yaml")
+    setProperty("inputSpec", "$rootDir/saleor-akeneo-integration-app-spec/swagger.yaml")
     setProperty("outputDir", "$buildDir/generated/api-spec")
     setProperty("apiPackage", "fi.metatavu.saleor.akeneo.integration.spec")
     setProperty("modelPackage", "fi.metatavu.saleor.akeneo.integration.model")
