@@ -1,0 +1,14 @@
+mutation Productcreate($input: ProductCreateInput!) {
+  productCreate (
+    input: $input
+  ) {
+    product {
+      slug
+    }
+    errors {
+      field
+      code
+      message
+    }
+  }
+}

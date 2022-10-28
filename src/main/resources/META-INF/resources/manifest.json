@@ -1,0 +1,18 @@
+{
+  "id": "saleor.akeneo.integration",
+  "version": "1.0.0",
+  "name": "Saleor-Akeneo PIM Integration App",
+  "about": "App for integrating Akeneo PIM into Saleor.",
+
+  "permissions": [ "MANAGE_PRODUCTS" ],
+
+  "appUrl": "http://192.168.0.2:8080/app-page.html",
+  "tokenTargetUrl": "http://192.168.0.2:8080/v1/registerApp",
+
+  "dataPrivacy": "Lorem ipsum",
+  "dataPrivacyUrl": "http://localhost:3001/app-data-privacy",
+  "homepageUrl": "http://localhost:3001/homepage",
+  "supportUrl": "http://localhost:3001/support",
+  "extensions": [],
+  "webhooks": []
+}
