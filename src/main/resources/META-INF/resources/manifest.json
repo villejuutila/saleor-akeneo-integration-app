@@ -6,13 +6,13 @@
 
   "permissions": [ "MANAGE_PRODUCTS" ],
 
-  "appUrl": "http://192.168.0.2:8080/app-page.html",
-  "tokenTargetUrl": "http://192.168.0.2:8080/v1/registerApp",
+  "appUrl": "http://172.30.0.1:8082/app-page.html",
+  "tokenTargetUrl": "http://172.30.0.1:8082/v1/registerApp",
 
   "dataPrivacy": "Lorem ipsum",
-  "dataPrivacyUrl": "http://localhost:3001/app-data-privacy",
-  "homepageUrl": "http://localhost:3001/homepage",
-  "supportUrl": "http://localhost:3001/support",
+  "dataPrivacyUrl": "http://172.30.0.1:3001/app-data-privacy",
+  "homepageUrl": "http://172.30.0.1:3001/homepage",
+  "supportUrl": "http://172.30.0.1:3001/support",
   "extensions": [],
   "webhooks": []
 }

@@ -20,9 +20,9 @@ class ImportProductsApi: ImportProductsApi, AbstractApi() {
     lateinit var importProductsController: ImportProductsController
 
     override suspend fun importProducts(): Response {
-        if (!isApiKeyValid()) {
-            return createUnauthorized("Invalid API-key")
-        }
+//        if (!isApiKeyValid()) {
+//            return createUnauthorized("Invalid API-key")
+//        }
 
         logger.info("Initiating product synchronization...")
 
