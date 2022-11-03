@@ -1,5 +1,22 @@
-# saleor-akeneo-integration Project
+# Saleor-Akekeno PIM Integration App
+This software was made as a part of my thesis.  
+It is meant to be hosted as an AWS Lambda function but has never been actually deployed.
 
+It exposes a REST API and its structure has been designed and specified as an external Swagger OpenAPI specification.  
+The specification can be found in [Saleor-Akeneo Integration App Spec](https://github.com/villejuutila/saleor-akeneo-integration-app-spec).  
+From the specification is then generated the structure of the of this Apps with Gradles OpenAPI Generator plugin.
+
+It provides endpoints for
+- registering the app with Saleor
+- importing product information from Akeneo PIM to Saleor.
+
+Same logic could be applied for integrating Saleor with basically any PIM that exposes a REST API.
+
+It also contains a very simple React application that demonstrates the extending capabilities of Saleor Dashboard.  
+Actual product information is importing is also triggered via the React application.  
+React application can be found in [Saleor-Akeneo Integration UI](https://github.com/villejuutila/saleor-akeneo-integration-ui).
+
+## Quarkus instructions for development and building
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
